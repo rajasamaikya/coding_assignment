@@ -57,6 +57,7 @@ dice_wins = [6]
 card_wins = [Card("spade", "J"), Card("diamond", "A")]
 
 while(True):
+    f_out.write("\n")
     (toss_result, dice_result, card_drawn) = play(f_out)    
     if toss_result in coin_wins and dice_result in dice_wins and card_drawn in card_wins :
         f_out.write("\n YOU WON! \n")
@@ -64,9 +65,3 @@ while(True):
         break
     else:
         continue
-
-
-
-
-    
-
