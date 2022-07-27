@@ -7,12 +7,10 @@ coin_faces = ["heads", "tails"]
 def toss_coin():
    return random.choice(coin_faces)
 
-
 die_faces = range(1, 7)
 
 def roll_dice():
     return random.choice(die_faces)
-
 
 class Card:
     def __init__(self, suite_p, value_p):
@@ -40,8 +38,7 @@ deck = build_deck()
 
 def shuffle_deck():
     return random.choice(deck)
-
-        
+ 
 def play(output_f):
     toss_result = toss_coin()
     dice_result = roll_dice()
@@ -62,7 +59,7 @@ card_wins = [Card("spade", "J"), Card("diamond", "A")]
 while(True):
     (toss_result, dice_result, card_drawn) = play(f_out)    
     if toss_result in coin_wins and dice_result in dice_wins and card_drawn in card_wins :
-        f_out.write("YOU WON! \n")
+        f_out.write("\n YOU WON! \n")
         f_out.close()
         break
     else:
